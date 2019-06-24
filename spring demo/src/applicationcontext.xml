@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 
+<bean name="myTrackCoach" class="com.example.springpgm.TrackCoach">
+</bean>
+-->
+<bean name="myFortuneService"
+ class="com.example.springpgm.HappyFortuneService"></bean>
+ 
+<!--   <bean name="myBaseballCoach" 
+ class="com.example.springpgm.BaseballCoach">-->
+ 
+<bean name="myBaseballCoach" class="com.example.springpgm.BaseballCoach">
+
+
+<property name="email" value="priya@gmail.com"/>
+<property name="team" value="adventurers"/>
+<property name="myFortuneService" ref="myFortuneService"/>
+</bean>
+
+<!--  <constructor-arg name="myFortuneService"  ref="myFortuneService"/> -->
+
+</beans>
